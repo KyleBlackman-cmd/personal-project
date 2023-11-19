@@ -1,0 +1,72 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors Game</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        label {
+            font-size: 18px;
+            margin-right: 10px;
+        }
+
+        select {
+            font-size: 16px;
+            padding: 5px;
+        }
+
+        button {
+            font-size: 16px;
+            padding: 8px 16px;
+            background-color: #4285f4;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3367d6;
+        }
+
+        p {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rock, Paper, Scissors Game</h1>
+
+    <label for="playerChoice">Choose: </label>
+    <select id="playerChoice">
+        <option value="Rock">Rock</option>
+        <option value="Paper">Paper</option>
+        <option value="Scissors">Scissors</option>
+    </select>
+
+    <button onclick="play()">Play</button>
+
+    <p id="result"></p>
+
+    <script src="external.js"></script>
+    <script>
+        function play() {
+            const playerSelection = document.getElementById("playerChoice").value;
+            game(playerSelection);
+        }
+    </script>
+</body>
+</html>
